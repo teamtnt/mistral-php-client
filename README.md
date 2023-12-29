@@ -20,7 +20,9 @@ require_once 'vendor/autoload.php';
 use Teamtnt\Mistral\Client;
 
 $apiKey       = $_ENV['MISTRAL_API_KEY'];
+
 $model    = 'mistral-tiny';
+
 $messages = [
     ["role" => "system", "content" => "You are a search experet."],
     ["role" => "user", "content" => "What is the best PHP Search engine?"],
@@ -30,6 +32,7 @@ $messages = [
 ];
 
 $client   = new Client($apiKey);
+
 $response = $client->chat($model, $messages, [
     'temperature' => 0.5,
     'top_p'       => 1,
