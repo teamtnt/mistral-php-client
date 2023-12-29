@@ -21,9 +21,9 @@ require_once 'vendor/autoload.php';
 
 use Teamtnt\Mistral\Client;
 
-$apiKey       = $_ENV['MISTRAL_API_KEY'];
+$apiKey = $_ENV['MISTRAL_API_KEY'];
 
-$model    = 'mistral-tiny';
+$model = 'mistral-tiny';
 
 $messages = [
     ["role" => "system", "content" => "You are a search experet."],
@@ -33,7 +33,7 @@ $messages = [
     // Add more messages as needed
 ];
 
-$client   = new Client($apiKey);
+$client = new Client($apiKey);
 
 $response = $client->chat($model, $messages, [
     'temperature' => 0.5,
@@ -62,9 +62,9 @@ require_once 'vendor/autoload.php';
 
 use Teamtnt\Mistral\Client;
 
-$apiKey       = $_ENV['MISTRAL_API_KEY'];
+$apiKey = $_ENV['MISTRAL_API_KEY'];
 
-$model    = 'mistral-tiny';
+$model = 'mistral-tiny';
 
 $messages = [
     ["role" => "system", "content" => "You are a search expert."],
@@ -72,7 +72,7 @@ $messages = [
     // Add more messages as needed
 ];
 
-$client   = new Client($apiKey);
+$client = new Client($apiKey);
 
 $response = $client->chat($model, $messages, [
     'temperature' => 0.0,
@@ -92,9 +92,9 @@ require_once 'vendor/autoload.php';
 
 use Teamtnt\Mistral\Client;
 
-$apiKey       = $_ENV['MISTRAL_API_KEY'];
+$apiKey = $_ENV['MISTRAL_API_KEY'];
 
-$client   = new Client($apiKey);
+$client = new Client($apiKey);
 
 $input = [
     'First sentence.',
@@ -113,9 +113,9 @@ require_once 'vendor/autoload.php';
 
 use Teamtnt\Mistral\Client;
 
-$apiKey       = $_ENV['MISTRAL_API_KEY'];
+$apiKey = $_ENV['MISTRAL_API_KEY'];
 
-$client   = new Client($apiKey);
+$client = new Client($apiKey);
 
 $response = $client->models();
 
